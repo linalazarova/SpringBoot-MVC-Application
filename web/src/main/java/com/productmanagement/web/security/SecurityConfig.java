@@ -10,10 +10,11 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig{
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeRequests()
-                .requestMatchers("/login", "/register", "/", "/css/**", "/js/**")
+                .requestMatchers("/login", "/register", "/css/**", "/js/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -31,6 +32,5 @@ public class SecurityConfig{
 
         return http.build();
     }
-
 
 }
