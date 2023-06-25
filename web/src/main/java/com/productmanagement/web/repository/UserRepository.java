@@ -1,9 +1,10 @@
 package com.productmanagement.web.repository;
 
-import com.productmanagement.web.models.User;
+import com.productmanagement.web.models.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long> {
-    User findByEmail(String email);
-    User findByUsername(String userName);
+public interface UserRepository extends JpaRepository<UserEntity, Long> {
+    UserEntity findByEmail(String email);
+    UserEntity findByUsername(String userName);
+    UserEntity findFirstByUsername(String username);
 }

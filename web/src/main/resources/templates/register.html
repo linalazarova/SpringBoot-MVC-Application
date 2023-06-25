@@ -1,4 +1,5 @@
-<html xmlns:th="http://thymeleaf.org">
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://thymeleaf.org">
 <head>
     <title>Register</title>
     <meta charset="UTF-8">
@@ -34,7 +35,7 @@
                                 th:field="*{email}">
                     </div>
                     <p th:if="${#fields.hasErrors('email')}" class="text-danger"></p>
-                    <div class="form-group mb-3">
+                    <div class="form-group">
                         <label>Password</label>
                         <input
                                 type="password"
@@ -43,7 +44,7 @@
                                 th:field="*{password}">
                     </div>
                     <p th:if="${#fields.hasErrors('password')}" class="text-danger"></p>
-                    <button th:href="@{/register}" type="submit" class="btn btn-secondary">Register</button>
+                    <button type="submit" class="btn btn-secondary">Register</button>
                 </form>
             </div>
         </div>

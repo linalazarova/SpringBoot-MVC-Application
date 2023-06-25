@@ -1,11 +1,9 @@
 package com.productmanagement.web.models;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name="products")
 public class Product {
@@ -15,5 +13,5 @@ public class Product {
     private String name;
     private String description;
     private int quantity;
-    private float price;
+    private double price;
 }
